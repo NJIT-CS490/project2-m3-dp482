@@ -71,6 +71,7 @@ def on_new_address(data):
     if data["address"] == "!! help":
         text="Bot: Use different commands to explore (!! about, !! help, !! funtranslate)";
         db.session.add(models.Usps(text));
+        return text
     
     info=data['address']
     db.session.commit();

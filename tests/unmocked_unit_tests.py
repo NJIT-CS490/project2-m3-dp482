@@ -12,6 +12,13 @@ class BotTest(unittest.TestCase):
         exp ="Bot: Welcome to Text+ "
         self.assertEqual(exp, res)
         
+    def test_Help(self):
+        data = {"address": "!! help"}
+        res = app.on_new_address(data)
+        exp="Bot: Use different commands to explore (!! about, !! help, !! funtranslate)"
+        self.assertEqual(exp, res)
+
+        
 if __name__ == '__main__':
     
     unittest.main()
