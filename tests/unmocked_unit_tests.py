@@ -24,6 +24,14 @@ class BotTest(unittest.TestCase):
         res = app.on_new_address(data)
         exp = None
         self.assertEqual(exp, res)
+    
+    def test_Connect(self):                                     
+        data = {'connect'}
+        users_total.append("connect")
+        userTotal=len(users_total) 
+        res = app.on_connect()
+        exp= ["connect"]
+        self.assertEqual(exp, res)
 
     
 if __name__ == '__main__':

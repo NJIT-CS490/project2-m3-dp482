@@ -47,6 +47,7 @@ def on_connect():
     })
     
     emit_all_addresses(ADDRESSES_RECEIVED_CHANNEL)
+    return users_total
 
 @socketio.on('disconnect')
 def on_disconnect():
