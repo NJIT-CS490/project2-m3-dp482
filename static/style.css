@@ -1,0 +1,50 @@
+body {
+    background-image: linear-gradient(to bottom right, orange, red);
+    color: black;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    position: fixed;
+    left:0px;
+}
+
+ol {
+    background-image: url('https://papers.co/wallpaper/papers.co-vq78-galaxy-note-7-art-official-background-blue-pattern-34-iphone6-plus-wallpaper.jpg');
+    position: fixed;
+    font-family: Arial;
+    color: white;
+    bottom: 200;
+    right: 350;
+    width: 50%;
+    height: 460px;
+    border: 4px solid black;
+    overflow: scroll;
+}
+
+input[id=user_input]{
+    position: fixed;
+    left:470px;
+    bottom: 165px;
+    padding: 5px;
+    font-size:10pt;
+}
+
+input[id=message_input]{
+    position: fixed;
+    left:370px;
+    bottom: 110px;
+    font-size:17pt;
+    width:500px;
+    
+    
+}
+button{
+  position: fixed;
+  left:880px;
+  bottom: 111px; 
+  font-size:14pt;
+}
