@@ -41,7 +41,12 @@ class BotTest(unittest.TestCase):
         res = app.on_disconnect()
         exp= []
         self.assertEqual(exp, res)
-
     
+    def test_Newuser(self):
+        data = {"address":"data"}
+        res = app.on_new_name(data)
+        exp = None
+        self.assertEqual(exp, res)
+
 if __name__ == '__main__':
     unittest.main()
