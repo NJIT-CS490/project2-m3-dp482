@@ -4,7 +4,6 @@ import os
 import flask
 import flask_sqlalchemy
 import flask_socketio
-import models 
 import re
 
 ADDRESSES_RECEIVED_CHANNEL = 'addresses received'
@@ -24,6 +23,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = database_uri
 db = flask_sqlalchemy.SQLAlchemy(app)
 db.init_app(app)
 db.app = app
+import models 
 
 db.create_all()
 db.session.commit()
@@ -66,6 +66,7 @@ def on_new_address(data):
     if data["address"] == "!! about":
         text="Bot: Welcome to Text+ ";
         db.session.add(models.Usps(text));
+        return text
         
     if data["address"] == "!! help":
         text="Bot: Use different commands to explore (!! about, !! help, !! funtranslate)";
