@@ -17,8 +17,14 @@ class BotTest(unittest.TestCase):
         res = app.on_new_address(data)
         exp="Bot: Use different commands to explore (!! about, !! help, !! funtranslate)"
         self.assertEqual(exp, res)
-
-        
-if __name__ == '__main__':
     
+    def test_Link(self):
+        data = {"address":"(?P<url>https?://[^\s]+)"}
+        click='url'
+        res = app.on_new_address(data)
+        exp = None
+        self.assertEqual(exp, res)
+
+    
+if __name__ == '__main__':
     unittest.main()

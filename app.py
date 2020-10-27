@@ -82,9 +82,9 @@ def on_new_address(data):
         socketio.emit('new data', {
         'test': click
     })
+        return click
     
     emit_all_addresses(ADDRESSES_RECEIVED_CHANNEL)
-
 
 @socketio.on('new username')
 def on_new_name(data):
