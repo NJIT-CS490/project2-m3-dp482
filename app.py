@@ -57,6 +57,7 @@ def on_disconnect():
     socketio.emit('disconnected', {
         'test': userTotal
     })
+    return users_total
 
 @socketio.on('new address input')
 def on_new_address(data):

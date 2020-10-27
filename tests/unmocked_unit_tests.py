@@ -32,6 +32,15 @@ class BotTest(unittest.TestCase):
         res = app.on_connect()
         exp= ["connect"]
         self.assertEqual(exp, res)
+        
+    def test_Disconnect(self):
+        data = {"connect"}
+        connectSucc='connect'
+        users_total.remove(connectSucc)
+        userTotal=len(users_total)
+        res = app.on_disconnect()
+        exp= []
+        self.assertEqual(exp, res)
 
     
 if __name__ == '__main__':
