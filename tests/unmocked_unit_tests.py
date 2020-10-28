@@ -18,9 +18,8 @@ class BotTest(unittest.TestCase):
         exp="Bot: Use different commands to explore (!! about, !! help, !! funtranslate)"
         self.assertEqual(exp, res)
     
-    def test_Link(self):
-        data = {"address":"(?P<url>https?://[^\s]+)"}
-        click='url'
+    def test_about(self):
+        data = {"address": "! about"}
         res = app.on_new_address(data)
         exp = None
         self.assertEqual(exp, res)
@@ -42,11 +41,5 @@ class BotTest(unittest.TestCase):
         exp= []
         self.assertEqual(exp, res)
     
-    def test_Newuser(self):
-        data = {"address":"data"}
-        res = app.on_new_name(data)
-        exp = None
-        self.assertEqual(exp, res)
-
 if __name__ == '__main__':
     unittest.main()
