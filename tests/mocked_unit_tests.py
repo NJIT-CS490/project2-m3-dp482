@@ -1,3 +1,13 @@
+# pylint: disable=anomalous-backslash-in-string
+# pylint: disable=missing-module-docstring
+# pylint: disable=import-error
+# pylint: disable=wrong-import-position
+# pylint: disable=missing-class-docstring
+# pylint: disable=invalid-name
+# pylint: disable=missing-function-docstring
+# pylint: disable=unused-variable
+# pylint: disable=trailing-whitespace
+
 import unittest
 import sys
 from os.path import dirname, join
