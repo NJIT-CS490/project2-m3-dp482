@@ -16,6 +16,8 @@ socketio.init_app(app, cors_allowed_origins="*")
 dotenv_path = join(dirname(__file__), 'sql.env')
 load_dotenv(dotenv_path)
 
+app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
+
 database_uri = os.environ['DATABASE_URL']
 
 app.config['SQLALCHEMY_DATABASE_URI'] = database_uri
@@ -61,7 +63,6 @@ def on_disconnect():
 
 @socketio.on('new address input')
 def on_new_address(data):
-    print("Got new message input with data:", data)
     
     db.session.add(models.Usps(data["address"]));
     
@@ -90,7 +91,6 @@ def on_new_address(data):
 
 @socketio.on('new username')
 def on_new_name(data):
-    print("Got new message input with data:", data)
     
     db.session.add(models.Usps(data["address"]));
     db.session.commit();
